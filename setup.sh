@@ -20,7 +20,7 @@ doas chimera-bootstrap -l /media/root
 git clone https://github.com/lidoryph/chimera-setup
 cd chimera-setup
 doas cp chroot-setup.sh /media/root
-chimera-chroot /media/root
+doas chimera-chroot /media/root
 doas rm /media/root/chroot-setup.sh
 cd ..
 doas rm -rf chimera-setup
