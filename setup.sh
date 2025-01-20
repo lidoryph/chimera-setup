@@ -18,7 +18,7 @@ mkdir -p /media/root/boot/efi
 mount /dev/sda1 /media/root/boot/efi
 chmod 755 /media/root
 chimera-bootstrap -l /media/root
-git clone github.com/lidoryph/chimera-setup
+git clone https://github.com/lidoryph/chimera-setup
 cd chimera-setup
 cp chroot-setup.sh /media/root
 chimera-chroot /media/root
