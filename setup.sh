@@ -2,12 +2,7 @@ echo THE PASSWORD IS chimera
 doas apk add git
 echo THE PASSWORD IS chimera
 doas wipefs -a /dev/sda
-doas sfdisk /dev/sda <<EOF
-label: gpt
-name=esp, size=100M, type="EFI System"
-name=swap, size=8G, type"Linux Swap"
-name=root
-EOF
+doas cfdisk /dev/sda 
 doas mkfs.vfat /dev/sda1
 doas mkswap /dev/sda2
 doas mkfs.ext4 /dev/sda3
